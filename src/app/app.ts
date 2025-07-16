@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { JogadorList } from './components/jogador-list/jogador-list';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [JogadorList],
+  template: `
+    <h1></h1>
+    <jogador-list></jogador-list>
+  `
 })
-export class App {
-  protected title = 'scout-jogadores';
-}
+export class App {}
