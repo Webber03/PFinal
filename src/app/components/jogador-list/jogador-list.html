@@ -1,1 +1,23 @@
-<p>jogador-list works!</p>
+<div class="container-scout">
+  <h1>ScoutX</h1>
+
+  <ng-container *ngIf="jogadores.length > 0; else loadingContent">
+    <div class="cards-grid">
+      <div class="jogador-card" *ngFor="let jogador of jogadores">
+        <div class="jogador-info">
+          <img [src]="jogador.foto || 'assets/placeholder-perfil.png'" 
+               alt="{{ jogador.nome }}" class="jogador-foto">
+          <div class="jogador-detalhes">
+            <p class="jogador-posicao">{{ jogador.posicao }}</p> 
+            <p class="jogador-nome">{{ jogador.nome }}</p>
+          </div>
+        </div>
+        <span *ngIf="jogador.numeroCamisa" class="jogador-numero">{{ jogador.numeroCamisa }}</span>
+        </div>
+    </div>
+  </ng-container>
+
+  <ng-template #loadingContent>
+    <p class="loading-message">Carregando jogadores...</p>
+  </ng-template>
+</div>

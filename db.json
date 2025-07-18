@@ -7,9 +7,10 @@
       "nacionalidade": "Argentina",
       "posicao": "Atacante",
       "clube": "Inter Miami",
-      "foto": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F758152918499731426%2F&psig=AOvVaw0NCoRPZzRx5ttldlk73jCc&ust=1752763610625000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJi397TPwY4DFQAAAAAdAAAAABAE",
+      "foto": "https://i.pinimg.com/1200x/de/0f/4f/de0f4f4319b6e190c17865e31dc4edef.jpg",
       "gols": "15",
-      "assistencias": "14"
+      "assistencias": "14",
+      "numeroCamisa": 10 
     },
     {
       "id": 2,

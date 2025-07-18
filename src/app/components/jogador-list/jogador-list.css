@@ -1,0 +1,141 @@
+/* jogador-list.css */
+
+.container-scout {
+    background-color: #0d0d0d; /* Fundo escuro quase preto */
+    color: #f0f0f0; /* Cor do texto padrão claro */
+    padding: 30px; /* Espaçamento interno */
+    min-height: 100vh; /* Ocupa a altura total da viewport */
+    font-family: 'Arial', sans-serif; /* Fonte similar à da imagem */
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff; /* Título principal branco */
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.cards-grid {
+    display: grid; /* Usamos Grid para um layout mais controlado */
+    /* Define colunas: 3 colunas de largura igual, com um mínimo de 250px por coluna */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px; /* Espaço entre os cards */
+    justify-items: center; /* Centraliza os itens na grade */
+    padding: 0 20px; /* Espaçamento lateral na grade */
+}
+
+.jogador-card {
+    background-color: #1a1a1a; /* Fundo dos cards (um pouco mais claro que o background geral) */
+    color: #e0e0e0; /* Cor do texto nos cards */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    padding: 15px;
+    display: flex; /* Para alinhar foto e texto dentro do card */
+    align-items: center; /* Alinha verticalmente foto e texto */
+    width: 100%; /* Ocupa a largura total da célula da grade */
+    min-height: 90px; /* Altura mínima para os cards */
+    position: relative; /* Para posicionar o número da camisa */
+    overflow: hidden; /* Garante que nada saia do card */
+}
+
+.jogador-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Permite que o info ocupe o espaço restante */
+}
+
+.jogador-foto {
+    width: 60px; /* Tamanho da foto do jogador */
+    height: 60px;
+    border-radius: 50%; /* Foto redonda */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    margin-right: 15px; /* Espaçamento à direita da foto */
+    border: 2px solid #555; /* Borda sutil ao redor da foto */
+}
+
+.jogador-detalhes {
+    display: flex;
+    flex-direction: column; /* Nome e posição em linhas separadas */
+}
+
+.jogador-posicao {
+    font-size: 0.9rem;
+    color: #aaaaaa; /* Cor para a posição, mais clara/cinza */
+    margin-bottom: 2px; /* Pequeno espaçamento entre posição e nome */
+    text-transform: uppercase; /* Posição em maiúsculas, como na imagem */
+    font-weight: 500;
+}
+
+.jogador-nome {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff; /* Nome do jogador branco */
+    margin: 0;
+    white-space: nowrap; /* Evita que o nome quebre a linha */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona "..." se o nome for muito longo */
+}
+
+.jogador-numero {
+    position: absolute; /* Posiciona o número da camisa */
+    top: 10px;
+    right: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #888; /* Cor mais clara para o número */
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo sutil para o número */
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.loading-message {
+    text-align: center;
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Mais colunas em telas menores */
+        padding: 0 10px;
+    }
+    .jogador-card {
+        padding: 10px;
+        min-height: 80px;
+    }
+    .jogador-foto {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .jogador-posicao {
+        font-size: 0.8rem;
+    }
+    .jogador-nome {
+        font-size: 1rem;
+    }
+    .jogador-numero {
+        font-size: 1rem;
+        top: 8px;
+        right: 10px;
+        padding: 2px 6px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-grid {
+        grid-template-columns: 1fr; /* Uma única coluna em telas muito pequenas */
+    }
+    .container-scout {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}
